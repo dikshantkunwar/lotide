@@ -2,7 +2,13 @@ const head = function(arr){
   return arr[0];
 }
 
-console.log(head([1,2,4]));
-console.log(head("abc"));
-console.log(head([1000]));
-console.log(head([]));
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log("😀 😀 Assertion Passed: " + actual + " === " + expected);
+  } else {
+    console.log("🥵 🥵 Assertion Failed: " + actual + " !== " + expected);
+  }
+};
+
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
