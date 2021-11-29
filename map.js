@@ -8,9 +8,11 @@ const map = function(array, callback) {
     results.push(callback(item));
   }
   return results;
-}
+};
 
-// Test Assertions
+module.exports = map;
+
+/* Test Assertions
 const results1 = map(words, word => word[0]);
 assertArraysEqual(results1,[ 'g', 'c', 't', 'm', 't' ]);
 
@@ -19,4 +21,4 @@ assertArraysEqual(results2,[ 'd', 'l', 'o', 'r', 'm' ]);
 
 const results3 = map(words, word => word);
 assertArraysEqual(results3,words)
-
+*/

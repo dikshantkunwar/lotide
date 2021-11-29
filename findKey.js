@@ -1,6 +1,3 @@
-
-const assertEqual = require('./assertEqual');
-
 const findKey = (obj, callback) => {
   let objValues = Object.keys(obj);
 
@@ -11,7 +8,9 @@ const findKey = (obj, callback) => {
   }
 };
 
-// Test Assertions
+module.exports = findKey;
+
+/* Test Assertions
 const result1 = findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
@@ -43,4 +42,4 @@ const result3 = findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 3);
 
-assertEqual(result3,"Akaleri");
+assertEqual(result3,"Akaleri");*/
