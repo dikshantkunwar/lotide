@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');
 
 // Returns true if both objects have identical keys with identical values.
@@ -21,27 +20,6 @@ const eqObjects = (object1, object2) => {
 };
 
 module.exports = eqObjects;
-
-// Test Assertions
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
-
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
-
-assertEqual(eqObjects(ab,ba), true);
-assertEqual(eqObjects(abc,ab), false);
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-eqObjects(cd, dc); // => true
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
-
-assertEqual(eqObjects(cd,dc), true);
-assertEqual(eqObjects(cd,cd2), false);
 
 
 
